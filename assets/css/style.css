@@ -1241,7 +1241,7 @@ nav a:focus-visible,
 }
 
 .step.current::after {
-    content: "EN CURSO";
+    content: "IN PROGRESS";
     float: right;
     padding: 5px 9px;
     border: 1px solid var(--border);

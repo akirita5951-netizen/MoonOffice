@@ -22,14 +22,14 @@ menuToggle.addEventListener('click', () => {
     const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
 
     menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-    menuToggle.setAttribute('aria-label', isExpanded ? 'Abrir menú' : 'Cerrar menú');
+    menuToggle.setAttribute('aria-label', isExpanded ? 'Open menu' : 'Close menu');
     navigation.classList.toggle('is-open', !isExpanded);
 });
 
 navigation.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
         menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Abrir menú');
+        menuToggle.setAttribute('aria-label', 'Open menu');
         navigation.classList.remove('is-open');
     });
 });
@@ -37,7 +37,7 @@ navigation.querySelectorAll('a').forEach((link) => {
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Abrir menú');
+        menuToggle.setAttribute('aria-label', 'Open menu');
         navigation.classList.remove('is-open');
     }
 });
